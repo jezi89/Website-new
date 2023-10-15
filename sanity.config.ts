@@ -2,6 +2,8 @@ import {defineConfig} from 'sanity';
 
 import {deskTool} from 'sanity/desk';
 
+import schemas from './sanity/schemas'
+
 const config = defineConfig({
 
     // Project ID is required
@@ -11,6 +13,7 @@ const config = defineConfig({
     apiVerison: '2023-10-15',
     basePath: "/studio",
     plugins: [deskTool()],
+    schema: {types: schemas}
 })
 
 export default config;
